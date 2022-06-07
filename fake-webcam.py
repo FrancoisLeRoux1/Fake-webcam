@@ -135,7 +135,7 @@ def change_mode(current_mode, toggled_mode, i, transition_freeze_duration_consta
     for _ in range(frames_to_wait):
         i, rev = next_frame_index(i, current_mode, rev)
         frame = frames[mode][i]
-        cv2.imshow('Frame', frame)
+        cv2.imshow('Webcam', frame)
         cv2.waitKey(int(1000 / frame_rate))
 
     new_i = transitions_dict[current_mode][toggled_mode][0][i]
